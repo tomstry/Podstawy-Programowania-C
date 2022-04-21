@@ -2,12 +2,16 @@
 #include<stdlib.h>
 #include<string.h>
 #include<ctype.h>
+#include<stdbool.h>
 
 void cezar(char *tekst){
     int shift = 0;
     int len = 0;
     while(tekst[shift] != ' ' && tekst[shift] != 0){
         shift ++;
+    }
+    if(tekst[shift] == 0){
+        shift--;
     }
     while(tekst[len] != 0){
         len ++;
@@ -51,7 +55,7 @@ int main(){
     cezar(tekst);
     printf("%s\n", tekst);
 
-    while(1){
+    while(true){
         printf("Tekst jawny: ");
         char *txt = getEncryptedLine();
         if(txt == NULL){

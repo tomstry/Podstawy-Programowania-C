@@ -9,6 +9,9 @@ void cezar(char *tekst){
     while(tekst[shift] != ' ' && tekst[shift] != 0){
         shift ++;
     }
+    if(tekst[shift] == 0){
+        shift--;
+    }
     while(tekst[len] != 0){
         len ++;
     }
